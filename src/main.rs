@@ -7,7 +7,8 @@ use std::str::FromStr;
 
 mod color_type;
 mod point_type;
-use crate::{color_type::Color, point_type::Point3d};
+mod ray_type;
+use crate::{color_type::Color, point_type::Point3d, ray_type::Ray};
 
 fn example1(output_file: PathBuf) -> io::Result<()> {
     let image_width: u16 = 256;

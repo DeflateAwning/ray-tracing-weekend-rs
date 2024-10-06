@@ -9,6 +9,14 @@ impl Point3d {
         Point3d { x, y, z };
     }
 
+    pub fn scalar_multiply(self, rhs: f32) -> Self {
+        Point3d {
+            x: rhs * self.x,
+            y: rhs * self.y,
+            z: rhs * self.z
+        }
+    }
+
     pub fn length_squared(self) -> f32 {
         self.x.powi(2) + self.y.powi(2) + self.z.powi(2)
     }
